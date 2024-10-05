@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [Header("Mouse")]
-    [SerializeField] private float mouseSensitivity = 900f;
-
+    [Header("Mouse References")]
     [SerializeField] private Transform playerBody;
 
-    [SerializeField] private float maxRotation = -90;
-    [SerializeField] private float minRotation = 90;
+    [Header("Mouse Setup")]
+
+    [SerializeField] private float mouseSensitivity = 900f;
+    [SerializeField] private float minLookUp = -90;
+    [SerializeField] private float maxLookUp = 90;
 
     private float XRotation;
 
+    private Vector2 mouseInput;
+
     public void LookLogic() 
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        mouseInput = new Vector2(Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime, Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime);
 
-        XRotation -= mouseY;
-        XRotation = Mathf.Clamp(XRotation, minRotation, maxRotation);
+        XRotation -= mouseInput.y;
+        XRotation = Mathf.Clamp(XRotation, minLookUp, maxLookUp);
 
         transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        playerBody.Rotate(Vector3.up * mouseInput.x);
     }
 }

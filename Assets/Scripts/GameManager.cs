@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Player References")]
     [SerializeField] private PlayerLook playerLook;
+
+    [SerializeField] private PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -14,5 +17,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         playerLook.LookLogic();
+        playerMovement.MovementLogic();
     }
 }
