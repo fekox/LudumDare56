@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1857285661455482233}
   - component: {fileID: 2070775596274056085}
   - component: {fileID: 6602628227664347228}
-  - component: {fileID: 8636612301760437916}
   - component: {fileID: 7474670544037004682}
+  - component: {fileID: 8636612301760437916}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -107,25 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8636612301760437916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74968480076274948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: e313ee78496b1394db5c6131ea0322c0, type: 2}
-  playerCamera: {fileID: 6636066343774035997}
-  gunTransform: {fileID: 1644219864197689468}
-  currentBullets: 0
-  reloadAnimator: {fileID: 7474670544037004682}
-  maxRecoild: -30
-  weaponID: 1
 --- !u!95 &7474670544037004682
 Animator:
   serializedVersion: 5
@@ -147,6 +128,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8636612301760437916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74968480076274948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: e313ee78496b1394db5c6131ea0322c0, type: 2}
+  playerCamera: {fileID: 6636066343774035997}
+  gunTransform: {fileID: 1644219864197689468}
+  currentBullets: 0
+  reloadAnimator: {fileID: 7474670544037004682}
+  maxRecoild: -30
+  weaponID: 1
 --- !u!1 &375333252639745379
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,8 +159,8 @@ GameObject:
   - component: {fileID: 4635650361104860901}
   - component: {fileID: 2615842432939753722}
   - component: {fileID: 3630867050674122975}
-  - component: {fileID: 6420485453748987122}
   - component: {fileID: 5685809922898822926}
+  - component: {fileID: 6420485453748987122}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -254,25 +254,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6420485453748987122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375333252639745379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: cc99463c8426c744baefdd60b878bb10, type: 2}
-  playerCamera: {fileID: 6636066343774035997}
-  gunTransform: {fileID: 152654360152781954}
-  currentBullets: 0
-  reloadAnimator: {fileID: 5685809922898822926}
-  maxRecoild: -30
-  weaponID: 0
 --- !u!95 &5685809922898822926
 Animator:
   serializedVersion: 5
@@ -294,6 +275,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6420485453748987122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375333252639745379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: cc99463c8426c744baefdd60b878bb10, type: 2}
+  playerCamera: {fileID: 6636066343774035997}
+  gunTransform: {fileID: 152654360152781954}
+  currentBullets: 0
+  reloadAnimator: {fileID: 5685809922898822926}
+  maxRecoild: -30
+  weaponID: 0
 --- !u!1 &5022786781003270513
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,8 +669,8 @@ GameObject:
   - component: {fileID: 4143288352534396079}
   - component: {fileID: 7255861146632431060}
   - component: {fileID: 5690878160818746621}
-  - component: {fileID: 5224646278677208026}
   - component: {fileID: 8324841957795501046}
+  - component: {fileID: 5224646278677208026}
   m_Layer: 0
   m_Name: Shootgun
   m_TagString: Untagged
@@ -764,25 +764,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5224646278677208026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8239385025811978799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 858e1ffc9e08df54b87755491d8f5df5, type: 2}
-  playerCamera: {fileID: 6636066343774035997}
-  gunTransform: {fileID: 7088109310457988745}
-  currentBullets: 0
-  reloadAnimator: {fileID: 8324841957795501046}
-  maxRecoild: -30
-  weaponID: 2
 --- !u!95 &8324841957795501046
 Animator:
   serializedVersion: 5
@@ -804,3 +785,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5224646278677208026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239385025811978799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7a5c43eb4777c4b908c6252a3772ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 858e1ffc9e08df54b87755491d8f5df5, type: 2}
+  playerCamera: {fileID: 6636066343774035997}
+  gunTransform: {fileID: 7088109310457988745}
+  currentBullets: 0
+  reloadAnimator: {fileID: 8324841957795501046}
+  maxRecoild: -30
+  weaponID: 2
