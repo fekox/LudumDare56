@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &475101796 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-  m_PrefabInstance: {fileID: 1607928082991571830}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &475101797 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6420485453748987122, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
@@ -440,26 +435,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 152654360152781954, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3433603015382876305, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -504,29 +479,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5909260160111911231, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420485453748987122, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: cc99463c8426c744baefdd60b878bb10, type: 2}
-    - target: {fileID: 6420485453748987122, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: maxRecoild
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420485453748987122, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: gunTransform
-      value: 
-      objectReference: {fileID: 475101796}
-    - target: {fileID: 9194506890186062552, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5909260160111911231, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
