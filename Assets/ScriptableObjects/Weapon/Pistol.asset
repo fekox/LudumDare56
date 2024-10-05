@@ -19,4 +19,4 @@ MonoBehaviour:
   fireRate: 1
   impactForce: 60
   reloadingTime: 5
-  recoil: 100
+  recoil: 400
