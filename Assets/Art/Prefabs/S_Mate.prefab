@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1263995090591674991}
   - component: {fileID: 9015154859807530194}
   - component: {fileID: 6944419330598244472}
+  - component: {fileID: 3155744566086362215}
   m_Layer: 0
   m_Name: S_Mate
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3155744566086362215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333698952682052167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.363068, y: 20.128113, z: 9.354538}
+  m_Center: {x: -0.8499508, y: -0.09573364, z: 0.9571668}

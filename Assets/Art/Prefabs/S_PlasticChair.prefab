@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8925687734546796289}
   - component: {fileID: 6838295827535999790}
   - component: {fileID: 993863925802610246}
+  - component: {fileID: 8741514481259541223}
   m_Layer: 0
   m_Name: S_PlasticChair
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8741514481259541223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995551113717446132}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 44.71862, y: 70.14191, z: 47.23516}
+  m_Center: {x: 3.9376824, y: -6.956357, z: -0.22871394}

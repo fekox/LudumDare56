@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4211540637700454482}
   - component: {fileID: 3930254396309415048}
   - component: {fileID: 8720286359907682852}
+  - component: {fileID: 4420131834712490155}
   m_Layer: 0
   m_Name: S_kitchen2
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4420131834712490155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300320894226720363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 203.14511, y: 57.276176, z: 204.22058}
+  m_Center: {x: 0.000015258789, y: 0.0000038146973, z: -0.0000076293945}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3944993432877040107}
   - component: {fileID: 67582781133664555}
   - component: {fileID: 2585092750889592935}
+  - component: {fileID: 2970026020378858114}
   m_Layer: 0
   m_Name: S_Coke
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6492620066892229929, guid: 910c94cad6d2380429af46901b816aee, type: 3}
+  - {fileID: 2100000, guid: a48032bf7e413b649b026636a6cc2ea0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2970026020378858114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639517962786773577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.5060425, y: 28.810425, z: 8.534729}
+  m_Center: {x: -0.0000076293945, y: -0.0000038146973, z: 0.0000076293945}
