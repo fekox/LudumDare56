@@ -22,3 +22,4 @@ MonoBehaviour:
   impactForce: 40
   reloadingTime: 4
   recoil: 300
+  cost: 10

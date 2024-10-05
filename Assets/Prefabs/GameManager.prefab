@@ -46,9 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLook: {fileID: 0}
   playerMovement: {fileID: 0}
+  playerCrouch: {fileID: 0}
+  changePlayerWeapon: {fileID: 0}
   playerShoot:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  playerCrouch: {fileID: 0}
-  changePlayerWeapon: {fileID: 0}
+  pickUpWeapon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
