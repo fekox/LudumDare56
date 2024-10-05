@@ -23,6 +23,9 @@ public class WeaponSO : ScriptableObject
     [Header("Reloading Time")]
     [SerializeField] private float reloadingTime;
 
+    [Header("Reloading Recoil")]
+    [SerializeField] private float recoil;
+
     public float GetDamage() 
     {
         return damage;
@@ -56,5 +59,10 @@ public class WeaponSO : ScriptableObject
     public float GetReloadingTime() 
     {
         return reloadingTime;
+    }
+
+    public float GetRecoil()
+    {
+        return recoil;
     }
 }

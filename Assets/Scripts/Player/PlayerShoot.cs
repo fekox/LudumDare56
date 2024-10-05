@@ -4,13 +4,17 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [Header("Player references")]
-    [SerializeField] private WeaponSO[] weapon;
+    [SerializeField] private WeaponSO weapon;
 
     [SerializeField] private Camera playerCamera;
 
     [SerializeField] private Transform gunTransform;
 
     [SerializeField] private int currentBullets = 0;
+
+    [Header("Recoil Setup")]
+    [SerializeField] private float maxRecoild;
+    private float minRecoild = 0;
 
     private int maxBullets = 0;
 
@@ -20,37 +24,55 @@ public class PlayerShoot : MonoBehaviour
 
     private float maxReloadingTime;
 
+    private float recoil;
+
     private bool isReloading = false;
+    private bool isShoting = false;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        maxReloadingTime = weapon[0].GetReloadingTime();
+        maxReloadingTime = weapon.GetReloadingTime();
         reloadingTime = maxReloadingTime;
 
-        maxBullets = weapon[0].GetMaxBullets();
+        maxBullets = weapon.GetMaxBullets();
         currentBullets = maxBullets;
+
+        recoil = weapon.GetRecoil();
+        maxRecoild = -recoil;
     }
 
     public void ShootLogic() 
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !isReloading) 
         {
-            nextTimeToFire = Time.time + 1f/weapon[0].GetFireRate();
+            nextTimeToFire = Time.time + 1f/weapon.GetFireRate();
             Shoot();
-        } 
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            isShoting = false;
+        }
+
+        if (!isShoting) 
+        {
+            RemoveRecoil();
+        }
     }
 
     public void Shoot() 
     {
+        isShoting = true;
+
         currentBullets--;
+
+        AddRecoil();
 
         RaycastHit hit;
 
-        Debug.Log("CurrentBullets: " + currentBullets);
-
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, weapon[0].GetRange())) 
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, weapon.GetRange())) 
         {
             Debug.Log(hit.transform.name);
         }
@@ -67,14 +89,38 @@ public class PlayerShoot : MonoBehaviour
         {
             reloadingTime -= Time.deltaTime;
 
-            Debug.Log("Reloading time: " + reloadingTime);
-
             if(reloadingTime <= 0) 
             {
                 reloadingTime = maxReloadingTime;
                 currentBullets = maxBullets;
                 isReloading = false;
             }
+        }
+    }
+
+    public void AddRecoil() 
+    {
+        float currentRotationX = transform.localEulerAngles.x;
+
+        if (currentRotationX > 180f)
+            currentRotationX -= 360f;
+
+        if (maxRecoild <= currentRotationX)
+        {
+            transform.Rotate(-recoil * Time.deltaTime, 0f, 0f);
+        }
+    }
+
+    public void RemoveRecoil() 
+    {
+        float currentRotationX = transform.localEulerAngles.x;
+
+        if (currentRotationX > 180f)
+            currentRotationX -= 360f;
+
+        if (minRecoild >= currentRotationX)
+        {
+            transform.Rotate(recoil * Time.deltaTime, 0f, 0f);
         }
     }
 }
