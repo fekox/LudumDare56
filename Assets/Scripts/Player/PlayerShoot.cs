@@ -12,8 +12,12 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private int currentBullets = 0;
 
+    [Header("Animation reference")]
+    [SerializeField] private Animator reloadAnimator;
+
     [Header("Recoil Setup")]
     [SerializeField] private float maxRecoild;
+
     private float minRecoild = 0;
 
     private int maxBullets = 0;
@@ -83,6 +87,7 @@ public class PlayerShoot : MonoBehaviour
         if(currentBullets <= 0) 
         {
             isReloading = true;
+            reloadAnimator.SetBool("IsReloading", isReloading);
         }
 
         if(isReloading) 
@@ -94,6 +99,7 @@ public class PlayerShoot : MonoBehaviour
                 reloadingTime = maxReloadingTime;
                 currentBullets = maxBullets;
                 isReloading = false;
+                reloadAnimator.SetBool("IsReloading", isReloading);
             }
         }
     }
