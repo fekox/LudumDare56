@@ -79,6 +79,13 @@ public class PlayerShoot : MonoBehaviour
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, weapon.GetRange())) 
         {
             Debug.Log(hit.transform.name);
+
+            ObjectsHealthSystem objectGO = hit.transform.GetComponent<ObjectsHealthSystem>();
+            
+            if (objectGO != null) 
+            {
+                objectGO.TakeDamage(weapon.GetDamage());
+            }
         }
     }
 

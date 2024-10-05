@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IHealthSystem
+public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
-    [SerializeField] private bool isDead;
 
     private void Start()
     {
@@ -40,22 +37,17 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
 
     public void TakeDamage(float number)
     {
-        currentHealth -= maxHealth;
+        currentHealth -= number;
 
-        if (currentHealth <= 0) 
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
-            isDead = true; 
+            Die();
         }
     }
 
-    public void Healing(float number) 
+    public void Die() 
     {
-        currentHealth += number;
-
-        if (currentHealth > maxHealth) 
-        {
-            currentHealth = maxHealth;
-        }
+        Destroy(gameObject);
     }
 }
