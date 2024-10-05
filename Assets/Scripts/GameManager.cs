@@ -11,10 +11,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerShoot playerShoot;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         playerLook.LookLogic();
         playerMovement.MovementLogic();
         playerShoot.ShootLogic();
+        playerShoot.ReloadLogic();
     }
 }
