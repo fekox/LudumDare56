@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
@@ -6,9 +7,15 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
 
+    public MeshRenderer meshRenderer;
+    public BoxCollider boxCollider;
+
     private void Start()
     {
         currentHealth = maxHealth;
+
+        meshRenderer = GetComponent<MeshRenderer>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     public float GetCurrentHealth()
@@ -43,12 +50,21 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Die();
+            StartCoroutine(DestroyObject(1));
         }
     }
 
     public void Die() 
     {
         Destroy(gameObject);
+    }
+
+    private IEnumerator DestroyObject(int time) 
+    {
+        //TODO: Add particles effect.
+
+        yield return new WaitForSeconds(time);
+
+        Die();
     }
 }
