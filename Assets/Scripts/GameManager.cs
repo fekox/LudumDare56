@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerShoot playerShoot;
 
+    [SerializeField] private PlayerCrouch playerCrouch;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -22,5 +24,6 @@ public class GameManager : MonoBehaviour
         playerMovement.MovementLogic();
         playerShoot.ShootLogic();
         playerShoot.ReloadLogic();
+        playerCrouch.CrouchLogic();
     }
 }

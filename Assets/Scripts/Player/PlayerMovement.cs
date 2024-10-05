@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(playerRigidbody == null) 
         {
-            playerRigidbody = GetComponent<Rigidbody>();
+            playerRigidbody = GetComponentInChildren<Rigidbody>();
         }
     }
 
