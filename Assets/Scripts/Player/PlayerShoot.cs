@@ -18,6 +18,8 @@ public class PlayerShoot : MonoBehaviour
     [Header("Recoil Setup")]
     [SerializeField] private float maxRecoild;
 
+    [SerializeField] private int weaponID;
+
     private float minRecoild = 0;
 
     private int maxBullets = 0;

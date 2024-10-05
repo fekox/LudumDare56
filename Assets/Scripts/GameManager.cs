@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement;
 
-    [SerializeField] private PlayerShoot playerShoot;
+    [SerializeField] private List<PlayerShoot> playerShoot;
 
     [SerializeField] private PlayerCrouch playerCrouch;
+
+    [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
+
 
     private void Start()
     {
@@ -22,8 +25,10 @@ public class GameManager : MonoBehaviour
     {
         playerLook.LookLogic();
         playerMovement.MovementLogic();
-        playerShoot.ShootLogic();
-        playerShoot.ReloadLogic();
+
+        playerShoot[changePlayerWeapon.GetWeaponID()].ShootLogic();
+        playerShoot[changePlayerWeapon.GetWeaponID()].ReloadLogic();
+
         playerCrouch.CrouchLogic();
     }
 }

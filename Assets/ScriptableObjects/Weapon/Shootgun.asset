@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7048111d6746d804ea140a921fd812ac, type: 3}
-  m_Name: Pistol
+  m_Name: Shootgun
   m_EditorClassIdentifier: 
-  damage: 20
-  range: 30
-  maxBullets: 10
+  weaponType: 2
+  weaponID: 2
+  damage: 30
+  range: 20
+  maxBullets: 4
   currentBullets: 0
-  fireRate: 1
+  fireRate: 0.5
   impactForce: 60
-  reloadingTime: 5
-  recoil: 400
+  reloadingTime: 6
+  recoil: 600
