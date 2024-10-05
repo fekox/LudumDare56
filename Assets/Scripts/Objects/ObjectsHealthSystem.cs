@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
 {
+    [Header("Object health")]
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
 
