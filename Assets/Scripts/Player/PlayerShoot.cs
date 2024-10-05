@@ -10,6 +10,8 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private Transform gunTransform;
 
+    [SerializeField] private PlayerPointsSystem playerPointsSystem;
+
     [SerializeField] private int currentBullets = 0;
 
     [Header("Animation reference")]
@@ -47,6 +49,7 @@ public class PlayerShoot : MonoBehaviour
 
         recoil = weapon.GetRecoil();
         maxRecoild = -recoil;
+
     }
 
     public void ShootLogic() 

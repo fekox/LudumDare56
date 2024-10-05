@@ -143,6 +143,7 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: e313ee78496b1394db5c6131ea0322c0, type: 2}
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 1644219864197689468}
+  playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
   reloadAnimator: {fileID: 7474670544037004682}
   maxRecoild: -30
@@ -290,6 +291,7 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: cc99463c8426c744baefdd60b878bb10, type: 2}
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 152654360152781954}
+  playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
   reloadAnimator: {fileID: 5685809922898822926}
   maxRecoild: -30
@@ -468,6 +470,7 @@ GameObject:
   - component: {fileID: 67518226693150253}
   - component: {fileID: 3172711298038363322}
   - component: {fileID: 2461084417315148535}
+  - component: {fileID: 114446515021838667}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -657,6 +660,19 @@ MonoBehaviour:
   - {fileID: 74968480076274948}
   - {fileID: 8239385025811978799}
   currentWeaponID: 0
+--- !u!114 &114446515021838667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370839665336438398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d110ff567c285b4419c036f8125bd637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPoints: 0
 --- !u!1 &8239385025811978799
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +816,7 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: 858e1ffc9e08df54b87755491d8f5df5, type: 2}
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 7088109310457988745}
+  playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
   reloadAnimator: {fileID: 8324841957795501046}
   maxRecoild: -30
