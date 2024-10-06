@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -84,6 +85,11 @@ public class PlayerShoot : MonoBehaviour
             if (objectGO != null) 
             {
                 objectGO.TakeDamage(weapon.GetDamage());
+            }
+
+            if(hit.rigidbody != null) 
+            {
+                hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
             }
         }
     }

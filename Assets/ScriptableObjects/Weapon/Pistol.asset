@@ -19,6 +19,6 @@ MonoBehaviour:
   maxBullets: 10
   currentBullets: 0
   fireRate: 5
-  impactForce: 60
+  impactForce: 300
   reloadingTime: 5
   cost: 0
