@@ -14,7 +14,6 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] private PlayerHealth playerHealth;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -23,7 +22,6 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Chase();
@@ -43,6 +41,15 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("WeaponCollider"))
+        {
+            PlayerPointsSystem pointsSystem = player.GetComponent<PlayerPointsSystem>();
+
+            pointsSystem.AddPoints(pointsSystem.GetPointsPerAnt());
+
+            Die();
+        }
+
         if (other.CompareTag("Player")) 
         {
             if (!player.GetComponent<PlayerHealth>().GetIsTakingDamage()) 

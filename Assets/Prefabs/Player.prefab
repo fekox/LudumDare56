@@ -122,8 +122,10 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 1644219864197689468}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 0}
   currentBullets: 0
   weaponID: 1
+  colliderPrefab: {fileID: 0}
   reloadAnimator: {fileID: 7474670544037004682}
   canvasUI: {fileID: 0}
 --- !u!1 &5022786781003270513
@@ -646,8 +648,10 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 7088109310457988745}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 0}
   currentBullets: 0
   weaponID: 2
+  colliderPrefab: {fileID: 0}
   reloadAnimator: {fileID: 8324841957795501046}
   canvasUI: {fileID: 0}
 --- !u!1001 &135237443768076511
@@ -1067,8 +1071,10 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 361658971656841293}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 3172711298038363322}
   currentBullets: 0
   weaponID: 0
+  colliderPrefab: {fileID: 6767424535883041241, guid: 60c6d9ea99e21704facaa687629e5e8c, type: 3}
   reloadAnimator: {fileID: 1172981010380201956}
   canvasUI: {fileID: 0}
 --- !u!1001 &6268907187357380745

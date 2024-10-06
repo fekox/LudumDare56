@@ -1,4 +1,5 @@
 using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,11 +14,15 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private PlayerPointsSystem playerPointsSystem;
 
+    [SerializeField] private PlayerCrouch playerCrouch;
+
     [Header("Weapon setup")]
 
     [SerializeField] private int currentBullets = 0;
 
     [SerializeField] private int weaponID;
+
+    [SerializeField] private GameObject colliderPrefab;
 
     [Header("Animation reference")]
     [SerializeField] private Animator reloadAnimator;
@@ -96,13 +101,19 @@ public class PlayerShoot : MonoBehaviour
                 spawner.TakeDamage(weapon.GetDamage());
             }
 
-            if (enemy != null)
+            if (enemy != null && !playerCrouch.GetIsCrouch())
             {
                 canvasUI.SpawnPerAntText();
                 enemy.Die();
             }
 
-            if(hit.rigidbody != null) 
+            if(enemy != null && playerCrouch.GetIsCrouch()) 
+            {
+                canvasUI.SpawnPerAntText();
+                StartCoroutine(SpawnCollider(hit.transform));
+            }
+
+            if (hit.rigidbody != null) 
             {
                 hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
             }
@@ -129,5 +140,14 @@ public class PlayerShoot : MonoBehaviour
                 reloadAnimator.SetBool("IsReloading", isReloading);
             }
         }
+    }
+
+    private IEnumerator SpawnCollider(Transform spawnPos) 
+    {
+        GameObject collider = Instantiate(colliderPrefab, new Vector3(spawnPos.position.x, spawnPos.position.y, spawnPos.position.z), Quaternion.identity);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(collider);
     }
 }
