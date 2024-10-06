@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &47425207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 514408918590654553, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+  m_PrefabInstance: {fileID: 297552397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &137041314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1622528231045642245, guid: 65f290f7e898d48489bd0940bc48c4f9, type: 3}
@@ -490,6 +495,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5480261101900181454, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480261101900181454, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 241
+      objectReference: {fileID: 0}
     - target: {fileID: 5781328722353976235, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
       propertyPath: m_Name
       value: Scene
@@ -499,6 +512,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+--- !u!1 &315236768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6084440388508391881, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+  m_PrefabInstance: {fileID: 297552397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &365265152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8355856102699357100, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+  m_PrefabInstance: {fileID: 297552397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &464116597
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +585,11 @@ MonoBehaviour:
   m_MinRegionArea: 0.05
   m_NavMeshData: {fileID: 23800000, guid: 975ab7cfc6108cf42b25738231d3d163, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &546920657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 949237879658237119, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+  m_PrefabInstance: {fileID: 297552397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &550373131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1560,6 +1588,26 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: door1
+      value: 
+      objectReference: {fileID: 546920657}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: door2
+      value: 
+      objectReference: {fileID: 1740314753}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: door3
+      value: 
+      objectReference: {fileID: 315236768}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: door4
+      value: 
+      objectReference: {fileID: 47425207}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: door5
+      value: 
+      objectReference: {fileID: 365265152}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 240649917}
@@ -1580,9 +1628,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1805774324}
     - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: rooms.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
       propertyPath: changePlayerWeapon
       value: 
       objectReference: {fileID: 1607928082991571831}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: rooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1803602671}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: rooms.Array.data[1]
+      value: 
+      objectReference: {fileID: 1831098460}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: rooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 1368444969}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: rooms.Array.data[3]
+      value: 
+      objectReference: {fileID: 1057135400}
     - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
       propertyPath: playerShoot.Array.data[0]
       value: 
@@ -1977,6 +2045,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3597973932816251893, guid: 8bddfd4f17270084288940ad5a4cec01, type: 3}
   m_PrefabInstance: {fileID: 1700916670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1740314753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2487425182797652534, guid: dcd8a1819888dcc4d819d79ba7a555c2, type: 3}
+  m_PrefabInstance: {fileID: 297552397}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1760537276
 PrefabInstance:
