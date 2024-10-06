@@ -35,8 +35,6 @@ public class PlayerShoot : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
         maxReloadingTime = weapon.GetReloadingTime();
         reloadingTime = maxReloadingTime;
 

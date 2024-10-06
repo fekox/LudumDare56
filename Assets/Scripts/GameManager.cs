@@ -19,8 +19,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private List<PickUpWeapon> pickUpWeapon;
 
-
-    private void Start()
+    private void OnEnable()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
