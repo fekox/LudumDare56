@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8758670814720495066}
   - component: {fileID: 6564867329854606645}
   - component: {fileID: 8679681280893927210}
+  - component: {fileID: 932120468828418373}
   m_Layer: 6
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: SpawnLimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,9 +121,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c3e5e7ea6c8d64caf913df5c73a808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLimiter: {fileID: 0}
+  spawnLimiter: {fileID: 932120468828418373}
   enemyPrefab: {fileID: 4657028831106098728, guid: cab46e27204952d44bcadaa850e57c06, type: 3}
   interval: 1
+--- !u!114 &932120468828418373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560365420492766352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4fc8dfa9a3a2348ad93daabbc3378f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnLimit: 20
 --- !u!1 &6058078989081626028
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 6922688185498304804}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.011278881, w: 0.9999364}
-  m_LocalPosition: {x: -1.2570002, y: -0.20399976, z: 1.5118351}
+  m_LocalPosition: {x: -1.203, y: -0.158, z: 1.5118351}
   m_LocalScale: {x: 0.99974567, y: 1.0005089, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,8 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
-  m_StartPoint: {x: 1.7565995, y: 0.5923435, z: -1.4924583}
-  m_EndPoint: {x: 1.7111799, y: 0.6345412, z: -1.4915161}
+  m_StartPoint: {x: 1.7557366, y: 0.4807161, z: -1.4924583}
+  m_EndPoint: {x: 1.6477298, y: 0.59454733, z: -1.4915161}
   m_Width: 1
   m_CostModifier: -1
   m_Bidirectional: 1

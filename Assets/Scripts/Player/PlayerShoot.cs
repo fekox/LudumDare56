@@ -13,17 +13,14 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private PlayerPointsSystem playerPointsSystem;
 
+    [Header("Weapon setup")]
+
     [SerializeField] private int currentBullets = 0;
-
-    [Header("Animation reference")]
-    [SerializeField] private Animator reloadAnimator;
-
-    [Header("Recoil Setup")]
-    [SerializeField] private float maxRecoild;
 
     [SerializeField] private int weaponID;
 
-    private float minRecoild = 0;
+    [Header("Animation reference")]
+    [SerializeField] private Animator reloadAnimator;
 
     private int maxBullets = 0;
 
@@ -38,8 +35,6 @@ public class PlayerShoot : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
         maxReloadingTime = weapon.GetReloadingTime();
         reloadingTime = maxReloadingTime;
 
@@ -88,6 +83,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (objectGO != null) 
             {
+                playerPointsSystem.AddPoints(2);
                 objectGO.TakeDamage(weapon.GetDamage());
             }
 
@@ -98,6 +94,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (enemy != null)
             {
+                playerPointsSystem.AddPoints(10);
                 enemy.Die();
             }
 

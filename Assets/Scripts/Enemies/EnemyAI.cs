@@ -12,6 +12,8 @@ public class EnemyAI : MonoBehaviour
 
     private SpawnLimiter spawnLimiter;
 
+    [SerializeField] private PlayerHealth playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,4 +41,16 @@ public class EnemyAI : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) 
+        {
+            if (!player.GetComponent<PlayerHealth>().GetIsTakingDamage()) 
+            {
+                player.GetComponent<PlayerHealth>().AddOneAnt();
+            }
+
+            Die();
+        }
+    }
 }
