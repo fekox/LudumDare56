@@ -47,12 +47,13 @@ MonoBehaviour:
   playerLook: {fileID: 0}
   playerMovement: {fileID: 0}
   playerCrouch: {fileID: 0}
+  playerHealth: {fileID: 0}
   changePlayerWeapon: {fileID: 0}
   playerShoot:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   pickUpWeapon:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8569482698519315306, guid: 65f290f7e898d48489bd0940bc48c4f9, type: 3}
+  - {fileID: 5263154877773714361, guid: e917aa5cd51d17e4596a10f1baae045b, type: 3}
+  - {fileID: 8964830781469494446, guid: e742cf9849cc54144952ef129fb491a4, type: 3}

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerCrouch playerCrouch;
 
+    [SerializeField] private PlayerHealth playerHealth;
+
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
 
     [SerializeField] private List<PlayerShoot> playerShoot;
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
     {
         playerLook.LookLogic();
         playerMovement.MovementLogic();
+
+        playerHealth.TakeDamageLogic();
 
         for (int i = 0; i < pickUpWeapon.Count; i++) 
         {
