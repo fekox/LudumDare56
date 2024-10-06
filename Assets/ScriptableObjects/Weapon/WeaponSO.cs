@@ -37,9 +37,6 @@ public class WeaponSO : ScriptableObject
     [Header("Reloading Time")]
     [SerializeField] private float reloadingTime;
 
-    [Header("Reloading Recoil")]
-    [SerializeField] private float recoil;
-
     [Header("Cost")]
     [SerializeField] private int cost;
 
@@ -86,11 +83,6 @@ public class WeaponSO : ScriptableObject
     public float GetReloadingTime() 
     {
         return reloadingTime;
-    }
-
-    public float GetRecoil()
-    {
-        return recoil;
     }
 
     public int GetCost() 

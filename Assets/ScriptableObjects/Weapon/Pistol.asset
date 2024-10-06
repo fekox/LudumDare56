@@ -21,5 +21,4 @@ MonoBehaviour:
   fireRate: 5
   impactForce: 60
   reloadingTime: 5
-  recoil: 400
   cost: 0
