@@ -13,11 +13,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerHealth playerHealth;
 
+    [Header("Weapons references")]
+
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
 
     [SerializeField] private List<PlayerShoot> playerShoot;
 
     [SerializeField] private List<PickUpWeapon> pickUpWeapon;
+
+    [Header("Canvas references")]
+
+    [SerializeField] private CanvasUI canvasUI;
 
     private void OnEnable()
     {
@@ -48,5 +54,7 @@ public class GameManager : MonoBehaviour
         playerShoot[changePlayerWeapon.GetWeaponID()].ReloadLogic();
 
         playerCrouch.CrouchLogic();
+
+        canvasUI.UpdatePointText();
     }
 }

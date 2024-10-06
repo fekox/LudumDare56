@@ -22,6 +22,9 @@ public class PlayerShoot : MonoBehaviour
     [Header("Animation reference")]
     [SerializeField] private Animator reloadAnimator;
 
+    [Header("CanvasUI reference")]
+    [SerializeField] private CanvasUI canvasUI;
+
     private int maxBullets = 0;
 
     private float nextTimeToFire = 0;
@@ -81,13 +84,13 @@ public class PlayerShoot : MonoBehaviour
 
             if (objectGO != null) 
             {
-                playerPointsSystem.AddPoints(2);
+                canvasUI.SpawnPerObjectText();
                 objectGO.TakeDamage(weapon.GetDamage());
             }
 
             if (enemy != null)
             {
-                playerPointsSystem.AddPoints(10);
+                canvasUI.SpawnPerAntText();
                 enemy.Die();
             }
 

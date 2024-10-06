@@ -123,9 +123,8 @@ MonoBehaviour:
   gunTransform: {fileID: 1644219864197689468}
   playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
-  reloadAnimator: {fileID: 7474670544037004682}
-  maxRecoild: -30
   weaponID: 1
+  reloadAnimator: {fileID: 7474670544037004682}
 --- !u!1 &5022786781003270513
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 3433603015382876305}
   mouseSensitivity: 100
-  minLookUp: -45
-  maxLookUp: 45
+  minLookUp: -90
+  maxLookUp: 90
 --- !u!1 &5370839665336438398
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +518,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPoints: 0
+  pointsPerAnt: 10
+  pointsPerObject: 2
+  pointsPerAnthill: 20
 --- !u!1 &8239385025811978799
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,9 +644,8 @@ MonoBehaviour:
   gunTransform: {fileID: 7088109310457988745}
   playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
-  reloadAnimator: {fileID: 8324841957795501046}
-  maxRecoild: -30
   weaponID: 2
+  reloadAnimator: {fileID: 8324841957795501046}
 --- !u!1001 &135237443768076511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1063,9 +1064,8 @@ MonoBehaviour:
   gunTransform: {fileID: 361658971656841293}
   playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
-  reloadAnimator: {fileID: 1172981010380201956}
-  maxRecoild: -30
   weaponID: 0
+  reloadAnimator: {fileID: 1172981010380201956}
 --- !u!1001 &6268907187357380745
 PrefabInstance:
   m_ObjectHideFlags: 0

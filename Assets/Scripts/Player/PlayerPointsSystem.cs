@@ -6,6 +6,10 @@ public class PlayerPointsSystem : MonoBehaviour
 {
     [SerializeField] private int currentPoints;
 
+    [SerializeField] private int pointsPerAnt;
+    [SerializeField] private int pointsPerObject;
+    [SerializeField] private int pointsPerAnthill;
+
     public void SetCurrentPoints(int number) 
     {
         currentPoints = number;
@@ -25,4 +29,20 @@ public class PlayerPointsSystem : MonoBehaviour
     {
         currentPoints -= number;
     }
+
+    public int GetPointsPerAnt() 
+    {
+        return pointsPerAnt;
+    }
+
+    public int GetPointsPerObject() 
+    {
+        return pointsPerObject;
+    }
+
+    public int GetPointsPerAnthill() 
+    {
+        return pointsPerAnthill;
+    }
+
 }
