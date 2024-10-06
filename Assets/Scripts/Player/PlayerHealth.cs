@@ -18,9 +18,15 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
 
     [SerializeField] private float damageTimer;
 
+    [Header("Objects Reference")]
+
     [SerializeField] private List<GameObject> antsUIGameObjects;
 
     [SerializeField] private List<GameObject> sandwichParts;
+
+    [Header("Sandwich animator")]
+
+    [SerializeField] private Animator sandwichAnimator;
 
 
     private float maxDamageTimer;
@@ -65,6 +71,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
             if (currentAntsTouched >= maxAntsTouchedLimit)
             {
                 isTakingDamage = true;
+                sandwichAnimator.SetBool("IsTakingDamage", isTakingDamage);
                 currentHealth--;
                 currentAntsTouched = 0;
 
@@ -97,7 +104,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
                     break;
 
 
-                case 6:
+                default:
                     break;
             }
 
@@ -144,6 +151,7 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
             if (damageTimer <= 0)
             {
                 isTakingDamage = false;
+                sandwichAnimator.SetBool("IsTakingDamage", isTakingDamage);
                 damageTimer = maxDamageTimer;
             }
         }
