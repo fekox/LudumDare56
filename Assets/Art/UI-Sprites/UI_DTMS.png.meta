@@ -390,6 +390,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1550
+        width: 1007
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f6e76fce2ad1044a9e4b35e1383dd9
+      internalID: -1220751255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_15
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 1418
+        width: 930
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ebe654a9b14994e874487b84d28bf4
+      internalID: 309888678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_16
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 1627
+        width: 186
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c2226b706792e459121eff27bad950
+      internalID: 997086368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_17
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1632
+        width: 502
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072773bb745ce0f4b9f493ad1ae99e7c
+      internalID: -1886882831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1249
+        width: 594
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede854cc883760d45be84a71fc1565d4
+      internalID: 2010258856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 1477
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0850370fddd8d542a3c710a8858de87
+      internalID: 410514814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DTMS_20
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 24
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca05ca8a32a718247b85e8af1784a232
+      internalID: 2034836901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -407,7 +554,14 @@ TextureImporter:
       UI_DTMS_11: 578327487
       UI_DTMS_12: -1204744818
       UI_DTMS_13: -257766667
+      UI_DTMS_14: -1220751255
+      UI_DTMS_15: 309888678
+      UI_DTMS_16: 997086368
+      UI_DTMS_17: -1886882831
+      UI_DTMS_18: 2010258856
+      UI_DTMS_19: 410514814
       UI_DTMS_2: 1269448191
+      UI_DTMS_20: 2034836901
       UI_DTMS_3: 1711482042
       UI_DTMS_4: 717217821
       UI_DTMS_5: 1184896880
