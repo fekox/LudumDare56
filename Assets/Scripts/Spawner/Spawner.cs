@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private float health = 100;
 
-    [SerializeField]
+    private spawnerGenerator respawnerGenerator;
+
     private SpawnLimiter spawnLimiter;
 
     [SerializeField]
@@ -29,13 +31,32 @@ public class Spawner : MonoBehaviour
     private IEnumerator SpawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
+
         if (spawnLimiter.SpawnLimitNotReached())
         {
             spawnLimiter.AddCount();
-            GameObject newEnemy = Instantiate(enemy, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
         }
 
         StartCoroutine(SpawnEnemy(interval, enemy));
+    }
+
+    [ContextMenu("die")]
+    public void SpawnerDie()
+    {
+        respawnerGenerator=GameObject.FindGameObjectWithTag("respawnerGenerator").GetComponent<spawnerGenerator>();
+
+        respawnerGenerator.SpawnerDespawned(transform.parent.gameObject);
+        Destroy(gameObject);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health = health - damage;
+        if (health==0)
+        {
+            SpawnerDie();
+        }
     }
 
 }

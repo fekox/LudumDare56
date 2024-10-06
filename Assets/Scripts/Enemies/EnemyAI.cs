@@ -10,7 +10,6 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] LayerMask groundLayer, playerLayer;
 
-    [SerializeField]
     private SpawnLimiter spawnLimiter;
 
     [SerializeField] private PlayerHealth playerHealth;

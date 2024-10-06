@@ -82,10 +82,17 @@ public class PlayerShoot : MonoBehaviour
             
             EnemyAI enemy = hit.transform.GetComponent<EnemyAI>();
 
+            Spawner spawner = hit.transform.GetComponent<Spawner>();
+
             if (objectGO != null) 
             {
                 canvasUI.SpawnPerObjectText();
                 objectGO.TakeDamage(weapon.GetDamage());
+            }
+
+            if (spawner != null)
+            {
+                spawner.TakeDamage(weapon.GetDamage());
             }
 
             if (enemy != null)

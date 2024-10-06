@@ -6,13 +6,12 @@ public class SpawnLimiter : MonoBehaviour
 {
     private int spawnCount=0;
     // Start is called before the first frame update
-    [SerializeField] public int spawnLimit;
+    [SerializeField] public int spawnLimit=20;
 
     [ContextMenu("AddCount")]
     public void AddCount()
     {
         spawnCount++;
-        Debug.Log(spawnCount);
     }
 
     [ContextMenu("DecreaseCount")]
