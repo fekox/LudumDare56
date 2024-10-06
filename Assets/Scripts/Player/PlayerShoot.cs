@@ -82,9 +82,16 @@ public class PlayerShoot : MonoBehaviour
 
             ObjectsHealthSystem objectGO = hit.transform.GetComponent<ObjectsHealthSystem>();
             
+            EnemyAI enemy = hit.transform.GetComponent<EnemyAI>();
+
             if (objectGO != null) 
             {
                 objectGO.TakeDamage(weapon.GetDamage());
+            }
+
+            if (enemy != null)
+            {
+                enemy.Die();
             }
 
             if(hit.rigidbody != null) 
