@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnLimiter
+  - respawnLocation
+  - respawnerGenerator
   layers:
   - Default
   - TransparentFX
