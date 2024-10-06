@@ -45,7 +45,7 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            StartCoroutine(DestroyObject(1));
+            StartCoroutine(DestroyObject(0.5f));
         }
     }
 
@@ -54,7 +54,7 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
         Destroy(gameObject);
     }
 
-    private IEnumerator DestroyObject(int time) 
+    private IEnumerator DestroyObject(float time) 
     {
         //TODO: Add particles effect.
 
