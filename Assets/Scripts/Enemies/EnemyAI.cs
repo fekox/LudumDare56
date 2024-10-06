@@ -10,23 +10,34 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] LayerMask groundLayer, playerLayer;
 
+    [SerializeField]
+    private SpawnLimiter spawnLimiter;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
-        
+        spawnLimiter = GameObject.FindGameObjectWithTag("SpawnLimiter").GetComponent<SpawnLimiter>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Chase(); 
+        Chase();
     }
 
     void Chase()
     {
         agent.SetDestination(player.transform.position);
+    }
+
+    [ContextMenu("die")]
+    void Die()
+    {
+        spawnLimiter.DecreaseCount();
+        Destroy(gameObject);
     }
 
 }
