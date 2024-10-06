@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    [SerializeField]
     private SpawnLimiter spawnLimiter;
 
     [SerializeField]
