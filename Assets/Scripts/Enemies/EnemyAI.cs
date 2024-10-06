@@ -33,7 +33,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     [ContextMenu("die")]
-    void Die()
+    public void Die()
     {
         spawnLimiter.DecreaseCount();
         Destroy(gameObject);

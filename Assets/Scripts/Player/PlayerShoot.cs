@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -32,8 +33,6 @@ public class PlayerShoot : MonoBehaviour
 
     private float maxReloadingTime;
 
-    private float recoil;
-
     private bool isReloading = false;
     private bool isShoting = false;
 
@@ -46,10 +45,6 @@ public class PlayerShoot : MonoBehaviour
 
         maxBullets = weapon.GetMaxBullets();
         currentBullets = maxBullets;
-
-        recoil = weapon.GetRecoil();
-        maxRecoild = -recoil;
-
     }
 
     public void ShootLogic() 
@@ -67,7 +62,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (!isShoting) 
         {
-            RemoveRecoil();
+            reloadAnimator.SetBool("IsRecoil", isShoting);
         }
     }
 
@@ -77,7 +72,7 @@ public class PlayerShoot : MonoBehaviour
 
         currentBullets--;
 
-        AddRecoil();
+        reloadAnimator.SetBool("IsRecoil", isShoting);
 
         RaycastHit hit;
 
@@ -87,9 +82,21 @@ public class PlayerShoot : MonoBehaviour
 
             ObjectsHealthSystem objectGO = hit.transform.GetComponent<ObjectsHealthSystem>();
             
+            EnemyAI enemy = hit.transform.GetComponent<EnemyAI>();
+
             if (objectGO != null) 
             {
                 objectGO.TakeDamage(weapon.GetDamage());
+            }
+
+            if (enemy != null)
+            {
+                enemy.Die();
+            }
+
+            if(hit.rigidbody != null) 
+            {
+                hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
             }
         }
     }
@@ -113,32 +120,6 @@ public class PlayerShoot : MonoBehaviour
                 isReloading = false;
                 reloadAnimator.SetBool("IsReloading", isReloading);
             }
-        }
-    }
-
-    public void AddRecoil() 
-    {
-        float currentRotationX = transform.localEulerAngles.x;
-
-        if (currentRotationX > 180f)
-            currentRotationX -= 360f;
-
-        if (maxRecoild <= currentRotationX)
-        {
-            transform.Rotate(-recoil * Time.deltaTime, 0f, 0f);
-        }
-    }
-
-    public void RemoveRecoil() 
-    {
-        float currentRotationX = transform.localEulerAngles.x;
-
-        if (currentRotationX > 180f)
-            currentRotationX -= 360f;
-
-        if (minRecoild >= currentRotationX)
-        {
-            transform.Rotate(recoil * Time.deltaTime, 0f, 0f);
         }
     }
 }

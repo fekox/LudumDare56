@@ -20,4 +20,9 @@ public class PlayerPointsSystem : MonoBehaviour
     {
         currentPoints += number;
     }
+
+    public void RemovePoints(int number) 
+    {
+        currentPoints -= number;
+    }
 }

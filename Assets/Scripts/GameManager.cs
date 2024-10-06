@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement;
 
-    [SerializeField] private List<PlayerShoot> playerShoot;
-
     [SerializeField] private PlayerCrouch playerCrouch;
 
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
+
+    [SerializeField] private List<PlayerShoot> playerShoot;
+
+    [SerializeField] private List<PickUpWeapon> pickUpWeapon;
 
 
     private void Start()
@@ -25,6 +27,19 @@ public class GameManager : MonoBehaviour
     {
         playerLook.LookLogic();
         playerMovement.MovementLogic();
+
+        for (int i = 0; i < pickUpWeapon.Count; i++) 
+        {
+            if (pickUpWeapon[i] == null)
+            {
+                pickUpWeapon.Remove(pickUpWeapon[i]);
+            }
+
+            else 
+            {
+                pickUpWeapon[i].PickUpLogic();
+            }
+        }
 
         playerShoot[changePlayerWeapon.GetWeaponID()].ShootLogic();
         playerShoot[changePlayerWeapon.GetWeaponID()].ReloadLogic();

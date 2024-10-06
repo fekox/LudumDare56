@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c3e5e7ea6c8d64caf913df5c73a808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLimiter: {fileID: 0}
   enemyPrefab: {fileID: 4657028831106098728, guid: cab46e27204952d44bcadaa850e57c06, type: 3}
   interval: 1
 --- !u!1 &6058078989081626028

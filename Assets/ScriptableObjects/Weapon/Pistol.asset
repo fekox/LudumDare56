@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7048111d6746d804ea140a921fd812ac, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
+  weaponType: 0
+  weaponID: 0
   damage: 20
   range: 30
   maxBullets: 10
   currentBullets: 0
-  fireRate: 1
-  impactForce: 60
+  fireRate: 5
+  impactForce: 300
   reloadingTime: 5
-  recoil: 400
+  cost: 0
