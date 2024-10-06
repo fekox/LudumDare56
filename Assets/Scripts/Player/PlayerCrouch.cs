@@ -7,6 +7,8 @@ public class PlayerCrouch : MonoBehaviour
 
     [SerializeField] private float startScale;
 
+    [SerializeField] private bool isCrouch;
+
     [Header("Reference Player Rigidbody")]
     [SerializeField] private Rigidbody playerRigidbody;
 
@@ -24,11 +26,18 @@ public class PlayerCrouch : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x, crouch, transform.localScale.z);
             playerRigidbody.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            isCrouch = true;
         }
 
         if (Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.LeftShift))
         {
             transform.localScale = new Vector3(transform.localScale.x, startScale, transform.localScale.z);
+            isCrouch = false;
         }
+    }
+
+    public bool GetIsCrouch() 
+    {
+        return isCrouch;
     }
 }
