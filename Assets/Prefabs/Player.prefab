@@ -162,6 +162,7 @@ Transform:
   - {fileID: 361658971656841293}
   - {fileID: 1644219864197689468}
   - {fileID: 7088109310457988745}
+  - {fileID: 7622130344433425718}
   m_Father: {fileID: 3433603015382876305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &6636066343774035997
@@ -195,7 +196,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -393,7 +394,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -629,6 +630,68 @@ MonoBehaviour:
   reloadAnimator: {fileID: 8324841957795501046}
   maxRecoild: -30
   weaponID: 2
+--- !u!1001 &135237443768076511
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6219549224768547400}
+    m_Modifications:
+    - target: {fileID: 733074566424363297, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_Name
+      value: D_Sanguchona
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.17499995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.48600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70612943
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6388753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.037165236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3030485
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -67.636
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 61.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+--- !u!4 &7622130344433425718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
+  m_PrefabInstance: {fileID: 135237443768076511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6007830728863614776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -749,9 +812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: cc99463c8426c744baefdd60b878bb10, type: 2}
   playerCamera: {fileID: 6636066343774035997}
-  gunTransform: {fileID: 0}
+  gunTransform: {fileID: 361658971656841293}
   playerPointsSystem: {fileID: 114446515021838667}
   currentBullets: 0
-  reloadAnimator: {fileID: 0}
+  reloadAnimator: {fileID: 1172981010380201956}
   maxRecoild: -30
   weaponID: 0
