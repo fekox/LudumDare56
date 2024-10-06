@@ -20,13 +20,13 @@ public class PlayerCrouch : MonoBehaviour
 
     public void CrouchLogic() 
     {
-        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl)) 
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             transform.localScale = new Vector3(transform.localScale.x, crouch, transform.localScale.z);
             playerRigidbody.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.LeftShift))
         {
             transform.localScale = new Vector3(transform.localScale.x, startScale, transform.localScale.z);
         }
