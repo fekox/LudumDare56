@@ -92,6 +92,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (spawner != null)
             {
+                canvasUI.SpawnPerAnthillText();
                 spawner.TakeDamage(weapon.GetDamage());
             }
 

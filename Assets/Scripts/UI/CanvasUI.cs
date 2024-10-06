@@ -9,13 +9,6 @@ public class CanvasUI : MonoBehaviour
 
     [SerializeField] private PlayerPointsSystem playerPointsSystem;
 
-    [Header("Text references")]
-    [SerializeField] private TextMeshProUGUI pointsPerObjectText;
-
-    [SerializeField] private TextMeshProUGUI pointsPerAntText;
-
-    [SerializeField] private TextMeshProUGUI pointsPerAnthillText;
-
     [Header("Prefabs references")]
     [SerializeField] private GameObject perObjectTextPrebaf;
     [SerializeField] private GameObject perAntTextPrebaf;
@@ -24,17 +17,13 @@ public class CanvasUI : MonoBehaviour
     public void UpdatePointText()
     {
         pointsText.text = "Points: " + playerPointsSystem.GetCurrentPoints();
-
-        pointsPerObjectText.text = "+ " + playerPointsSystem.GetPointsPerObject();
-        
-        pointsPerAntText.text = "+ " + playerPointsSystem.GetPointsPerAnt();
-
-        pointsPerAnthillText.text = "+ " + playerPointsSystem.GetPointsPerObject();
     }
 
     public void SpawnPerObjectText()
     {
         GameObject gameObject = Instantiate(perObjectTextPrebaf);
+
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "+ " + playerPointsSystem.GetPointsPerObject();
 
         StartCoroutine(DestroyPerObjectText(gameObject));
     }
@@ -47,9 +36,14 @@ public class CanvasUI : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+
+
     public void SpawnPerAntText()
     {
         GameObject gameObject = Instantiate(perAntTextPrebaf);
+
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "+ " + playerPointsSystem.GetPointsPerAnt();
 
         StartCoroutine(DestroyPerAntText(gameObject));
     }
@@ -62,9 +56,16 @@ public class CanvasUI : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+
+
+
     public void SpawnPerAnthillText()
     {
         GameObject gameObject = Instantiate(perAnthillTextPrebaf);
+
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "+ " + playerPointsSystem.GetPointsPerAnthill();
+
 
         StartCoroutine(DestroyPerAnthillText(gameObject));
     }
