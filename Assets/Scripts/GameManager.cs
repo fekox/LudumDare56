@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
             pointToIncreaseDificult *= 2;
             spawnGenerator.DecreaseTimeUntilSameSpotRespawn(1);
 
-            spawnGenerator.DecreaseIntervalSpawn(2);
+            spawnGenerator.DecreaseIntervalSpawn(3);
 
             spawnLimiter.IncreaseSpawnLimit(10);
 

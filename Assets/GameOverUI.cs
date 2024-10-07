@@ -14,7 +14,7 @@ public class GameOverUI : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("ProgramingFacundo");
+        SceneManager.LoadScene("Level");
     }
 
     public void MainMenuButton()

@@ -7,7 +7,7 @@ public class TutorialUI : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene("ProgramingFacundo");
+        SceneManager.LoadScene("Level");
     }
 
 
