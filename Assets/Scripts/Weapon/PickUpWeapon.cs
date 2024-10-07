@@ -34,7 +34,6 @@ public class PickUpWeapon : MonoBehaviour
         if (canPickup && Input.GetKeyDown(KeyCode.E) 
             && weapon.GetCost() <= playerPoints.GetCurrentPoints()) 
         {
-            playerPoints.RemovePoints(weapon.GetCost());
             playerWeapon.CheckWeapon(weapon);
             Destroy(gameObject);
         }
