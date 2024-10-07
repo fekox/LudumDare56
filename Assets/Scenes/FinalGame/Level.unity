@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8012636986295868692, guid: f4ac9410f5d3b7f40ac11240a50eb5f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -501,6 +501,7 @@ MonoBehaviour:
   perObjectTextPrebaf: {fileID: 827847129289861440, guid: 8029330cd8781a14f9748ecad9928d6a, type: 3}
   perAntTextPrebaf: {fileID: 4169446921874383900, guid: 4e46a696a0c2eb54f96e9ba0c426ffd9, type: 3}
   perAnthillTextPrebaf: {fileID: 7626182619759407224, guid: 55a14d46cfe17954fb0369026fc3e706, type: 3}
+  gameManager: {fileID: 1507302107}
 --- !u!1001 &297552397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2738,7 +2739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 948828162810090042, guid: 0b4f8bcfc0c07a242bc912ae47d95053, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8551499110553524873, guid: 0b4f8bcfc0c07a242bc912ae47d95053, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2816,7 +2817,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3316,6 +3317,10 @@ PrefabInstance:
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 240649917}
+    - target: {fileID: 3021206586418210960, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: weaponID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3433603015382876305, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.45
@@ -3356,6 +3361,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3477901728175917616, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477901728175917616, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00339
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477901728175917616, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00103
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074121803509671293, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074121803509671293, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107421318910951598, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3c1548963ab781e448a8bc5edd05502d, type: 2}
     - target: {fileID: 5370839665336438398, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3368,10 +3397,34 @@ PrefabInstance:
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 240649917}
+    - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: weaponID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: colliderPrefab
+      value: 
+      objectReference: {fileID: 6767424535883041241, guid: 1cfa40f9bce441949b94df7d80d498ec, type: 3}
     - target: {fileID: 7494641151816386919, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: damageIndicator
       value: 
       objectReference: {fileID: 567183041}
+    - target: {fileID: 8361352753074875198, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6946584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361352753074875198, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7193398
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361352753074875198, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581721029365839399, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8891553530236337871, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: canvasUI
       value: 

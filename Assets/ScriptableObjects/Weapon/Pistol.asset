@@ -20,5 +20,5 @@ MonoBehaviour:
   currentBullets: 0
   fireRate: 2
   impactForce: 300
-  reloadingTime: 5
+  reloadingTime: 3.5
   cost: 0

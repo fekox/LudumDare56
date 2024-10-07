@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   enemyPrefab: {fileID: 4657028831106098728, guid: cab46e27204952d44bcadaa850e57c06, type: 3}
-  interval: 1
+  interval: 2
 --- !u!95 &3019504377217530172
 Animator:
   serializedVersion: 5

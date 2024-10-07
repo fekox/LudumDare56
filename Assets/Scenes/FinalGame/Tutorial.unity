@@ -458,7 +458,17 @@ PrefabInstance:
         Shift: Crouch
 
         Mouse
-        Wheel: Camera'
+        Wheel: Change weapons
+
+        E: Pick up weapon'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659416633675622321, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_fontSize
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659416633675622321, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2088448006197200407, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
       propertyPath: m_Name
@@ -467,6 +477,22 @@ PrefabInstance:
     - target: {fileID: 2088448006197200407, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956994888456654812, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 457.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956994888456654812, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 268.4727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956994888456654812, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -519
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956994888456654812, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -408
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5916247164625235094, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
