@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,6 +416,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 862010468300788494, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862010468300788494, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862010468300788494, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862010468300788494, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889275511382087310, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_text
+      value: 'Kill the ants before
+
+        they get your Sandwich
+
+
+        Destroy
+        the anthills to stop the ants
+
+
+        Destroy Doors, Chairs, Windows and
+        Vent Crates to open your Path!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 889275511382087310, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_fontSize
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 889275511382087310, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 2088448006197200407, guid: 25cf355f1146e084ab5245d34a5d21cf, type: 3}
       propertyPath: m_Name
       value: Tutorial
@@ -521,6 +559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 3497101404188275234, guid: 6b57aeded8f42d1458f72a332b3df34c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -623,7 +665,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1332857643757925471, guid: fe17e5099a87bd342b78216390453b8e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe17e5099a87bd342b78216390453b8e, type: 3}
