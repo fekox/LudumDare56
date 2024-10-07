@@ -1,8 +1,22 @@
 using UnityEngine;
 
+
+public enum WeaponType 
+{
+    Pistol,
+    Rifle,
+    Shootgun
+};
+
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon")]
 public class WeaponSO : ScriptableObject
 {
+    [Header("Weapon type")]
+    [SerializeField] private WeaponType weaponType;
+
+    [Header("Wepon ID")]
+    [SerializeField] private int weaponID;
+
     [Header("Damage")]
     [SerializeField] private float damage;
 
@@ -23,8 +37,18 @@ public class WeaponSO : ScriptableObject
     [Header("Reloading Time")]
     [SerializeField] private float reloadingTime;
 
-    [Header("Reloading Recoil")]
-    [SerializeField] private float recoil;
+    [Header("Cost")]
+    [SerializeField] private int cost;
+
+    public WeaponType GetWeaponType() 
+    { 
+        return weaponType; 
+    }
+
+    public int GetID() 
+    {
+        return weaponID;
+    }
 
     public float GetDamage() 
     {
@@ -61,8 +85,8 @@ public class WeaponSO : ScriptableObject
         return reloadingTime;
     }
 
-    public float GetRecoil()
+    public int GetCost() 
     {
-        return recoil;
+        return cost;
     }
 }

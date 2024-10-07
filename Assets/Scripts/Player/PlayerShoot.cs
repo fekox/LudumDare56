@@ -1,3 +1,6 @@
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,11 +13,28 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private Transform gunTransform;
 
+    [SerializeField] private PlayerPointsSystem playerPointsSystem;
+
+    [SerializeField] private PlayerCrouch playerCrouch;
+
+    [Header("Weapon setup")]
+
     [SerializeField] private int currentBullets = 0;
 
-    [Header("Recoil Setup")]
-    [SerializeField] private float maxRecoild;
-    private float minRecoild = 0;
+    [SerializeField] private int weaponID;
+
+    [SerializeField] private GameObject colliderPrefab;
+
+    [Header("Animation reference")]
+    [SerializeField] private Animator reloadAnimator;
+
+    [Header("CanvasUI reference")]
+    [SerializeField] private CanvasUI canvasUI;
+
+    [Header("Particles effect")]
+    [SerializeField] private ParticleSystem shootParticles;
+
+    [SerializeField] private GameObject imactEffectParticlesPrefab;
 
     private int maxBullets = 0;
 
@@ -24,23 +44,16 @@ public class PlayerShoot : MonoBehaviour
 
     private float maxReloadingTime;
 
-    private float recoil;
-
     private bool isReloading = false;
     private bool isShoting = false;
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
         maxReloadingTime = weapon.GetReloadingTime();
         reloadingTime = maxReloadingTime;
 
         maxBullets = weapon.GetMaxBullets();
         currentBullets = maxBullets;
-
-        recoil = weapon.GetRecoil();
-        maxRecoild = -recoil;
     }
 
     public void ShootLogic() 
@@ -58,23 +71,63 @@ public class PlayerShoot : MonoBehaviour
 
         if (!isShoting) 
         {
-            RemoveRecoil();
+            reloadAnimator.SetBool("IsRecoil", isShoting);
         }
     }
 
     public void Shoot() 
     {
+        shootParticles.Play();
+
         isShoting = true;
 
         currentBullets--;
 
-        AddRecoil();
+        reloadAnimator.SetBool("IsRecoil", isShoting);
 
         RaycastHit hit;
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, weapon.GetRange())) 
         {
             Debug.Log(hit.transform.name);
+
+            ObjectsHealthSystem objectGO = hit.transform.GetComponent<ObjectsHealthSystem>();
+            
+            EnemyAI enemy = hit.transform.GetComponent<EnemyAI>();
+
+            Spawner spawner = hit.transform.GetComponent<Spawner>();
+
+            if (objectGO != null) 
+            {
+                canvasUI.SpawnPerObjectText();
+                objectGO.TakeDamage(weapon.GetDamage());
+            }
+
+            if (spawner != null)
+            {
+                canvasUI.SpawnPerAnthillText();
+                spawner.TakeDamage(weapon.GetDamage());
+            }
+
+            if (enemy != null && !playerCrouch.GetIsCrouch())
+            {
+                canvasUI.SpawnPerAntText();
+                enemy.Die();
+            }
+
+            if(enemy != null && playerCrouch.GetIsCrouch()) 
+            {
+                canvasUI.SpawnPerAntText();
+                StartCoroutine(SpawnCollider(hit.transform));
+            }
+
+            if (hit.rigidbody != null) 
+            {
+                hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
+            }
+
+            StartCoroutine(ShowParticles(imactEffectParticlesPrefab, hit));
+
         }
     }
 
@@ -83,6 +136,7 @@ public class PlayerShoot : MonoBehaviour
         if(currentBullets <= 0) 
         {
             isReloading = true;
+            reloadAnimator.SetBool("IsReloading", isReloading);
         }
 
         if(isReloading) 
@@ -94,33 +148,31 @@ public class PlayerShoot : MonoBehaviour
                 reloadingTime = maxReloadingTime;
                 currentBullets = maxBullets;
                 isReloading = false;
+                reloadAnimator.SetBool("IsReloading", isReloading);
             }
         }
     }
 
-    public void AddRecoil() 
+    private IEnumerator SpawnCollider(Transform spawnPos) 
     {
-        float currentRotationX = transform.localEulerAngles.x;
+        GameObject collider = Instantiate(colliderPrefab, new Vector3(spawnPos.position.x, spawnPos.position.y, spawnPos.position.z), Quaternion.identity);
 
-        if (currentRotationX > 180f)
-            currentRotationX -= 360f;
+        yield return new WaitForSeconds(0.5f);
 
-        if (maxRecoild <= currentRotationX)
-        {
-            transform.Rotate(-recoil * Time.deltaTime, 0f, 0f);
-        }
+        Destroy(collider);
     }
 
-    public void RemoveRecoil() 
+    private IEnumerator ShowParticles(GameObject particle, RaycastHit hit) 
     {
-        float currentRotationX = transform.localEulerAngles.x;
+        GameObject impactGO = Instantiate(imactEffectParticlesPrefab, hit.point, Quaternion.LookRotation(hit.normal));
 
-        if (currentRotationX > 180f)
-            currentRotationX -= 360f;
+        yield return new WaitForSeconds(0.5f);
 
-        if (minRecoild >= currentRotationX)
-        {
-            transform.Rotate(recoil * Time.deltaTime, 0f, 0f);
-        }
+        Destroy(impactGO);
+    }
+
+    public int GetCurrentBullets() 
+    {
+        return currentBullets;
     }
 }
