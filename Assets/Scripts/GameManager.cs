@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerHealth playerHealth;
 
+    [SerializeField] private PlayerPointsSystem playerPointsSystem;
+
     [Header("Weapons references")]
 
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
@@ -36,6 +38,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject door3;
     [SerializeField] private GameObject door4;
     [SerializeField] private GameObject door5;
+
+    [Header("Setup Dificult")]
+    [SerializeField] private int pointToIncreaseDificult;
+
+    [SerializeField] private spawnerGenerator spawnGenerator;
+    
+    [SerializeField] private SpawnLimiter spawnLimiter;
+
 
     private bool isLivingActive;
     private bool isBathroomActive;
@@ -84,6 +94,8 @@ public class GameManager : MonoBehaviour
         CheckKitchen();
         CheckBathroom();
         CheckLiving();
+
+        IncreaseDificult();
     }
     
     private void ActiveKitchen() 
@@ -161,6 +173,39 @@ public class GameManager : MonoBehaviour
             {
                 ActiveLivingroom();
             }
+        }
+    }
+
+    private void IncreaseDificult() 
+    {
+        if (playerPointsSystem.GetCurrentPoints() >= pointToIncreaseDificult)
+        {
+            pointToIncreaseDificult *= 2;
+            spawnGenerator.DecreaseTimeUntilSameSpotRespawn(1);
+
+            spawnGenerator.DecreaseIntervalSpawn(2);
+
+            spawnLimiter.IncreaseSpawnLimit(10);
+
+            CheckLimit();
+        }
+    }
+
+    private void CheckLimit() 
+    {
+        if (spawnGenerator.GetTimeUntilSameSpotRespawn() <= 15) 
+        {
+            spawnGenerator.SetTimeUntilSameSpotRespawn(15);
+        }
+
+        if (spawnGenerator.GetIntervalSpawn() <= 7)
+        {
+            spawnGenerator.SetIntervalSpawn(7);
+        }
+
+        if (spawnLimiter.GetSpawnLimit() >= 126)
+        {
+            spawnLimiter.SetSpawnLimit(126);
         }
     }
 }

@@ -27,5 +27,19 @@ public class SpawnLimiter : MonoBehaviour
         return (spawnCount < spawnLimit);
     }
 
+    public void IncreaseSpawnLimit(int number) 
+    {
+        spawnLimit += number;
+    }
 
+    public int GetSpawnLimit() 
+    {
+        return spawnLimit;
+    }
+
+    public void SetSpawnLimit(int number) 
+    {
+        spawnLimit = number;
+
+    }
 }

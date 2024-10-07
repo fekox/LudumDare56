@@ -1838,6 +1838,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1607928082991571831}
     - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+      propertyPath: playerPointsSystem
+      value: 
+      objectReference: {fileID: 1607928082991571836}
+    - target: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 
       objectReference: {fileID: 1803602671}

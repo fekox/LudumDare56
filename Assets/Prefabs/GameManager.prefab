@@ -50,6 +50,7 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   playerCrouch: {fileID: 0}
   playerHealth: {fileID: 0}
+  playerPointsSystem: {fileID: 0}
   changePlayerWeapon: {fileID: 0}
   playerShoot:
   - {fileID: 0}
@@ -70,6 +71,9 @@ MonoBehaviour:
   door3: {fileID: 0}
   door4: {fileID: 0}
   door5: {fileID: 0}
+  pointToIncreaseDificult: 300
+  spawnGenerator: {fileID: 1769225204786689524}
+  spawnLimiter: {fileID: 8379525866959011917}
 --- !u!1001 &2107309242090183506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7598879848435866399, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
       propertyPath: spawnLimit
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8227225978607928164, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
       propertyPath: m_Name
@@ -136,6 +140,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1898893238649896575, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
   m_PrefabInstance: {fileID: 2107309242090183506}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8379525866959011917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7598879848435866399, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
+  m_PrefabInstance: {fileID: 2107309242090183506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4fc8dfa9a3a2348ad93daabbc3378f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4919057076640721859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,11 +165,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: spawnerLimit
-      value: 13
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
+      propertyPath: intervalSpawn
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: timeUntilSameSpotRespawn
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7446679163814155255, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,6 +220,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
+--- !u!114 &1769225204786689524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
+  m_PrefabInstance: {fileID: 4919057076640721859}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89b033d27bb5994b9231a29e87d360e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2527622646057187380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7446679163814155255, guid: 7751143b1014f2a49a856f904d984eca, type: 3}

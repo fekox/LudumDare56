@@ -39,10 +39,6 @@ public class spawnerGenerator : MonoBehaviour
 
     private IEnumerator SpawnSpawner(float interval, GameObject spawner)
     {
-        yield return new WaitForSeconds(interval);
-
-
-
         if ((spawnCount < spawnerLimit) && (respawnLocationList.Count > 0))
         {
             GameObject nextSpawnerLocation = respawnLocationList[Random.Range(0, respawnLocationList.Count)];
@@ -53,6 +49,8 @@ public class spawnerGenerator : MonoBehaviour
 
 
         }
+
+        yield return new WaitForSeconds(interval);
 
         StartCoroutine(SpawnSpawner(interval, spawner));
     }
@@ -74,4 +72,48 @@ public class spawnerGenerator : MonoBehaviour
         respawnLocationList.Add(respawnLocation);
     }
 
+    public void DecreaseTimeUntilSameSpotRespawn(float number) 
+    {
+        timeUntilSameSpotRespawn -= number;
+    }
+
+    public void DecreaseIntervalSpawn(int number) 
+    {
+        intervalSpawn -= number;
+    }
+
+    public void IncreaseSpawnerLimit(int number) 
+    {
+        spawnerLimit += number;
+    }
+
+    public void SetTimeUntilSameSpotRespawn(float number)
+    {
+        timeUntilSameSpotRespawn = number;
+    }
+
+    public void SetIntervalSpawn(int number)
+    {
+        intervalSpawn = number;
+    }
+
+    public void SetSpawnerLimit(int number)
+    {
+        spawnerLimit = number;
+    }
+
+    public float GetTimeUntilSameSpotRespawn() 
+    {
+        return timeUntilSameSpotRespawn;
+    }
+
+    public int GetIntervalSpawn() 
+    {
+        return intervalSpawn;
+    }
+
+    public int GetSapawnerLimit() 
+    {
+        return spawnerLimit;
+    }
 }

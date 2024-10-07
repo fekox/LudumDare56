@@ -149,7 +149,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 1.5
   m_Acceleration: 300
   avoidancePriority: 50
   m_AngularSpeed: 950
@@ -179,4 +179,4 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  spawnLimiter: {fileID: 0}
+  playerHealth: {fileID: 0}
