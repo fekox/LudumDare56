@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (!player.GetComponent<PlayerHealth>().GetIsTakingDamage()) 
             {
-                player.GetComponent<PlayerHealth>().AddOneAnt();
+                player.GetComponent<PlayerHealth>().AddOneAnt(gameObject.transform.position);
             }
 
             Die();

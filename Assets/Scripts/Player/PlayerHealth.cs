@@ -28,6 +28,9 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
 
     [SerializeField] private Animator sandwichAnimator;
 
+    [Header("Damage Indicator")]
+    [SerializeField] private DamageIndicator damageIndicator;
+
 
     private float maxDamageTimer;
 
@@ -173,9 +176,13 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
         }
     }
 
-    public void AddOneAnt()
+    public void AddOneAnt(Vector3 damage)
     {
         currentAntsTouched++;
+
+        damageIndicator.SetDamageLocation(damage);
+        GameObject go = Instantiate(damageIndicator.gameObject, damageIndicator.transform.position, damageIndicator.transform.rotation, damageIndicator.transform.parent);
+        go.SetActive(true);
     }
 
     public void ResetAntsTouched()

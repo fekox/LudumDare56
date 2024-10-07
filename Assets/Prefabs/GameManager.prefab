@@ -60,6 +60,16 @@ MonoBehaviour:
   - {fileID: 5263154877773714361, guid: e917aa5cd51d17e4596a10f1baae045b, type: 3}
   - {fileID: 8964830781469494446, guid: e742cf9849cc54144952ef129fb491a4, type: 3}
   canvasUI: {fileID: 0}
+  rooms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  door1: {fileID: 0}
+  door2: {fileID: 0}
+  door3: {fileID: 0}
+  door4: {fileID: 0}
+  door5: {fileID: 0}
 --- !u!1001 &2107309242090183506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,6 +118,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7598879848435866399, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
+      propertyPath: spawnLimit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8227225978607928164, guid: ac69025f939e2b24f9398c079489e4a6, type: 3}
       propertyPath: m_Name
       value: SpawnLimiter
@@ -133,6 +147,14 @@ PrefabInstance:
     - target: {fileID: 6068708908387439961, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: m_Name
       value: SpawnerGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
+      propertyPath: spawnerLimit
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
+      propertyPath: timeUntilSameSpotRespawn
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7446679163814155255, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: m_LocalPosition.x
