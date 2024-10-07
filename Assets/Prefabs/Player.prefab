@@ -128,6 +128,8 @@ MonoBehaviour:
   colliderPrefab: {fileID: 0}
   reloadAnimator: {fileID: 7474670544037004682}
   canvasUI: {fileID: 0}
+  shootParticles: {fileID: 0}
+  imactEffectParticlesPrefab: {fileID: 0}
 --- !u!1 &5022786781003270513
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +657,8 @@ MonoBehaviour:
   colliderPrefab: {fileID: 0}
   reloadAnimator: {fileID: 8324841957795501046}
   canvasUI: {fileID: 0}
+  shootParticles: {fileID: 0}
+  imactEffectParticlesPrefab: {fileID: 0}
 --- !u!1001 &135237443768076511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,6 +823,73 @@ Animator:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7505049316697757161, guid: b89d0b529ec6ce5429317c9b2aa3411d, type: 3}
   m_PrefabInstance: {fileID: 135237443768076511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3025651333011085397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 361658971656841293}
+    m_Modifications:
+    - target: {fileID: 2173315069433476855, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_Name
+      value: GunTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.35774308
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.25486782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.89711386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.04742448
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 15.512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -140.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 333.937
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+--- !u!4 &839739809577338555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+  m_PrefabInstance: {fileID: 3025651333011085397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8474610924957857543 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6658176667423469394, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+  m_PrefabInstance: {fileID: 3025651333011085397}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3073307381381133098
 PrefabInstance:
@@ -1060,7 +1131,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6225317037190147957, guid: 7e4cbb8d00964da4da372fd412fa0735, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 839739809577338555}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 162425990319905967, guid: 7e4cbb8d00964da4da372fd412fa0735, type: 3}
       insertIndex: -1
@@ -1122,6 +1196,8 @@ MonoBehaviour:
   colliderPrefab: {fileID: 6767424535883041241, guid: 60c6d9ea99e21704facaa687629e5e8c, type: 3}
   reloadAnimator: {fileID: 1172981010380201956}
   canvasUI: {fileID: 0}
+  shootParticles: {fileID: 8474610924957857543}
+  imactEffectParticlesPrefab: {fileID: 1520877993511370597, guid: a82e24accc0cd934baa7e8ba48f56d0d, type: 3}
 --- !u!1001 &6268907187357380745
 PrefabInstance:
   m_ObjectHideFlags: 0

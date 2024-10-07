@@ -1,5 +1,6 @@
 using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -29,6 +30,11 @@ public class PlayerShoot : MonoBehaviour
 
     [Header("CanvasUI reference")]
     [SerializeField] private CanvasUI canvasUI;
+
+    [Header("Particles effect")]
+    [SerializeField] private ParticleSystem shootParticles;
+
+    [SerializeField] private GameObject imactEffectParticlesPrefab;
 
     private int maxBullets = 0;
 
@@ -71,6 +77,8 @@ public class PlayerShoot : MonoBehaviour
 
     public void Shoot() 
     {
+        shootParticles.Play();
+
         isShoting = true;
 
         currentBullets--;
@@ -117,6 +125,9 @@ public class PlayerShoot : MonoBehaviour
             {
                 hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
             }
+
+            StartCoroutine(ShowParticles(imactEffectParticlesPrefab, hit));
+
         }
     }
 
@@ -149,5 +160,14 @@ public class PlayerShoot : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         Destroy(collider);
+    }
+
+    private IEnumerator ShowParticles(GameObject particle, RaycastHit hit) 
+    {
+        GameObject impactGO = Instantiate(imactEffectParticlesPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(impactGO);
     }
 }
