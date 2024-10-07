@@ -1197,7 +1197,7 @@ MonoBehaviour:
   reloadAnimator: {fileID: 1172981010380201956}
   canvasUI: {fileID: 0}
   shootParticles: {fileID: 8474610924957857543}
-  imactEffectParticlesPrefab: {fileID: 1520877993511370597, guid: a82e24accc0cd934baa7e8ba48f56d0d, type: 3}
+  imactEffectParticlesPrefab: {fileID: 4836983693096932938, guid: 8110d5504aa9f85438cc1b424b3c8080, type: 3}
 --- !u!1001 &6268907187357380745
 PrefabInstance:
   m_ObjectHideFlags: 0

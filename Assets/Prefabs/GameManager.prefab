@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: spawnerLimit
-      value: 6
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6686029785223716407, guid: 7751143b1014f2a49a856f904d984eca, type: 3}
       propertyPath: timeUntilSameSpotRespawn

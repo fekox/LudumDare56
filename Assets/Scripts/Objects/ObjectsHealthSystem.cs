@@ -7,7 +7,7 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
 
-
+    [SerializeField] private GameObject destroyParticlesEffectPrefab;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -45,7 +45,7 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            StartCoroutine(DestroyObject(0.5f));
+            StartCoroutine(DestroyObject(0.3f));
         }
     }
 
@@ -56,7 +56,7 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
 
     private IEnumerator DestroyObject(float time) 
     {
-        //TODO: Add particles effect.
+        Instantiate(destroyParticlesEffectPrefab, gameObject.transform);
 
         yield return new WaitForSeconds(time);
 
