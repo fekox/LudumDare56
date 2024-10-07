@@ -122,10 +122,12 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 1644219864197689468}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 0}
   currentBullets: 0
-  reloadAnimator: {fileID: 7474670544037004682}
-  maxRecoild: -30
   weaponID: 1
+  colliderPrefab: {fileID: 0}
+  reloadAnimator: {fileID: 7474670544037004682}
+  canvasUI: {fileID: 0}
 --- !u!1 &5022786781003270513
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 3433603015382876305}
   mouseSensitivity: 100
-  minLookUp: -45
-  maxLookUp: 45
+  minLookUp: -90
+  maxLookUp: 90
 --- !u!1 &5370839665336438398
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 3433603015382876305}
   playerRigidbody: {fileID: 0}
+  playerCrouch: {fileID: 3172711298038363322}
   playerSpeed: 5
 --- !u!114 &3172711298038363322
 MonoBehaviour:
@@ -484,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crouch: 0.5
   startScale: 1
+  isCrouch: 0
   playerRigidbody: {fileID: 0}
 --- !u!114 &2461084417315148535
 MonoBehaviour:
@@ -519,6 +523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPoints: 0
+  pointsPerAnt: 10
+  pointsPerObject: 2
+  pointsPerAnthill: 20
 --- !u!1 &8239385025811978799
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,10 +648,12 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 7088109310457988745}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 0}
   currentBullets: 0
-  reloadAnimator: {fileID: 8324841957795501046}
-  maxRecoild: -30
   weaponID: 2
+  colliderPrefab: {fileID: 0}
+  reloadAnimator: {fileID: 8324841957795501046}
+  canvasUI: {fileID: 0}
 --- !u!1001 &135237443768076511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,10 +1071,12 @@ MonoBehaviour:
   playerCamera: {fileID: 6636066343774035997}
   gunTransform: {fileID: 361658971656841293}
   playerPointsSystem: {fileID: 114446515021838667}
+  playerCrouch: {fileID: 3172711298038363322}
   currentBullets: 0
-  reloadAnimator: {fileID: 1172981010380201956}
-  maxRecoild: -30
   weaponID: 0
+  colliderPrefab: {fileID: 6767424535883041241, guid: 60c6d9ea99e21704facaa687629e5e8c, type: 3}
+  reloadAnimator: {fileID: 1172981010380201956}
+  canvasUI: {fileID: 0}
 --- !u!1001 &6268907187357380745
 PrefabInstance:
   m_ObjectHideFlags: 0
