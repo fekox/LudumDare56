@@ -69,4 +69,9 @@ public class spawnerGenerator : MonoBehaviour
         respawnLocationList.Add(respawnLocation);
     }
 
+    public void AddNewSpawner(GameObject respawnLocation)
+    {
+        respawnLocationList.Add(respawnLocation);
+    }
+
 }
