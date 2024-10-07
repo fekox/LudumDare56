@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Unity.VisualScripting.Metadata;
 
 public class GameManager : MonoBehaviour
@@ -237,5 +238,21 @@ public class GameManager : MonoBehaviour
         {
             spawnLimiter.SetSpawnLimit(126);
         }
+    }
+
+    public void Resume() 
+    {
+        isPaused = false;
+    }
+
+    public void ReturnMenu() 
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
