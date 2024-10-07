@@ -7,16 +7,24 @@ public class CanvasUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI pointsText;
 
+    [SerializeField] private TextMeshProUGUI currentBulletsText;
+
+
     [SerializeField] private PlayerPointsSystem playerPointsSystem;
+
+    [SerializeField] private PlayerShoot playerShoot;
+
 
     [Header("Prefabs references")]
     [SerializeField] private GameObject perObjectTextPrebaf;
     [SerializeField] private GameObject perAntTextPrebaf;
     [SerializeField] private GameObject perAnthillTextPrebaf;
 
-    public void UpdatePointText()
+    public void UpdateUIText()
     {
         pointsText.text = "Points: " + playerPointsSystem.GetCurrentPoints();
+
+        currentBulletsText.text = "Bullets: " + playerShoot.GetCurrentBullets();
     }
 
     public void SpawnPerObjectText()

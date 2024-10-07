@@ -170,4 +170,9 @@ public class PlayerShoot : MonoBehaviour
 
         Destroy(impactGO);
     }
+
+    public int GetCurrentBullets() 
+    {
+        return currentBullets;
+    }
 }

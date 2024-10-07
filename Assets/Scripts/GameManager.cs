@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         playerCrouch.CrouchLogic();
 
-        canvasUI.UpdatePointText();
+        canvasUI.UpdateUIText();
 
         CheckKitchen();
         CheckBathroom();
