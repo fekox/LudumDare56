@@ -33,6 +33,8 @@ public class spawnerGenerator : MonoBehaviour
 
     private IEnumerator SpawnSpawner(float interval, GameObject spawner)
     {
+        FindAnyObjectByType<AudioManager>().Play("SpawnSpawner");
+
         if ((spawnCount < spawnerLimit) && (respawnLocationList.Count > 0))
         {
             GameObject nextSpawnerLocation = respawnLocationList[Random.Range(0, respawnLocationList.Count)];

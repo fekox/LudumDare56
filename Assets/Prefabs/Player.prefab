@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 3172711298038363322}
   - component: {fileID: 2461084417315148535}
   - component: {fileID: 114446515021838667}
+  - component: {fileID: 6280315854338830542}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -379,9 +380,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e313ee78496b1394db5c6131ea0322c0, type: 2}
   - {fileID: 11400000, guid: 858e1ffc9e08df54b87755491d8f5df5, type: 2}
   AllWeaponsGO:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5845979785785285527}
+  - {fileID: 2800868223012659940}
+  - {fileID: 8581721029365839399}
   currentWeaponID: 0
 --- !u!114 &114446515021838667
 MonoBehaviour:
@@ -399,6 +400,19 @@ MonoBehaviour:
   pointsPerAnt: 10
   pointsPerObject: 2
   pointsPerAnthill: 20
+--- !u!114 &6280315854338830542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370839665336438398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf2aee3ba05c154ba631c89d8382553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 4
 --- !u!1001 &135237443768076511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -638,6 +652,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2475325249295261422, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
   m_PrefabInstance: {fileID: 1304322069150307550}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &5656374235203500940 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6658176667423469394, guid: 92ec0b012e3bbe44c9aab364b3775680, type: 3}
+  m_PrefabInstance: {fileID: 1304322069150307550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1741484770619812659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,7 +747,7 @@ Animator:
   m_GameObject: {fileID: 8581721029365839399}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2cb7954984fac5243a091ee4f3bcb926, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3c1548963ab781e448a8bc5edd05502d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -761,7 +780,7 @@ MonoBehaviour:
   colliderPrefab: {fileID: 6767424535883041241, guid: 60c6d9ea99e21704facaa687629e5e8c, type: 3}
   reloadAnimator: {fileID: 6749384544026025470}
   canvasUI: {fileID: 0}
-  shootParticles: {fileID: 8474610924957857543}
+  shootParticles: {fileID: 5656374235203500940}
   imactEffectParticlesPrefab: {fileID: 4836983693096932938, guid: 8110d5504aa9f85438cc1b424b3c8080, type: 3}
 --- !u!1001 &3025651333011085397
 PrefabInstance:
@@ -928,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 948828162810090042, guid: 0b4f8bcfc0c07a242bc912ae47d95053, type: 3}
       propertyPath: m_Name
       value: D_Winchester
+      objectReference: {fileID: 0}
+    - target: {fileID: 948828162810090042, guid: 0b4f8bcfc0c07a242bc912ae47d95053, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8551499110553524873, guid: 0b4f8bcfc0c07a242bc912ae47d95053, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1139,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 162425990319905967, guid: 7e4cbb8d00964da4da372fd412fa0735, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6225317037190147957, guid: 7e4cbb8d00964da4da372fd412fa0735, type: 3}
       propertyPath: m_LocalScale.x

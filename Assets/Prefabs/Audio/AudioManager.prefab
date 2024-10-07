@@ -44,4 +44,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0462389eac336694692afc27875da942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: 7f34a50c116bd444a9e2a2709ad64674, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: AntKilled
+    clip: {fileID: 8300000, guid: ebc9bf8b5c97ce848a86b1247c4f300c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Reload
+    clip: {fileID: 8300000, guid: 88c76e738b9a0964fb1339729f1e9ff8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: e0675d529ee63dc4791dcec502c6a99d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpawnSpawner
+    clip: {fileID: 8300000, guid: bb5b19925e1d9364fad3b7e6e14ef75c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DestroyObj
+    clip: {fileID: 8300000, guid: aaaa6a57dac45a64185db8729eafe070, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Voice1
+    clip: {fileID: 8300000, guid: 4380a0b40d433dc4dbdbaa3b0570ff40, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Voice2
+    clip: {fileID: 8300000, guid: 6bf3af5b237931b419bbeb473bf48d2a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

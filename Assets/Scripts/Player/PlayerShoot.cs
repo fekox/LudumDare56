@@ -1,4 +1,3 @@
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using System.Collections;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
@@ -77,6 +76,8 @@ public class PlayerShoot : MonoBehaviour
 
     public void Shoot() 
     {
+        FindAnyObjectByType<AudioManager>().Play("Shoot");
+
         shootParticles.Play();
 
         isShoting = true;
@@ -135,11 +136,12 @@ public class PlayerShoot : MonoBehaviour
     {
         if(currentBullets <= 0) 
         {
+            FindAnyObjectByType<AudioManager>().Play("Reload");
             isReloading = true;
             reloadAnimator.SetBool("IsReloading", isReloading);
         }
 
-        if(isReloading) 
+        if (isReloading) 
         {
             reloadingTime -= Time.deltaTime;
 

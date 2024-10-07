@@ -38,7 +38,9 @@ public class Spawner : MonoBehaviour
     [ContextMenu("die")]
     public void SpawnerDie()
     {
-        respawnerGenerator=GameObject.FindGameObjectWithTag("respawnerGenerator").GetComponent<spawnerGenerator>();
+        FindAnyObjectByType<AudioManager>().Play("DestroyObj");
+
+        respawnerGenerator =GameObject.FindGameObjectWithTag("respawnerGenerator").GetComponent<spawnerGenerator>();
 
         respawnerGenerator.SpawnerDespawned(transform.parent.gameObject);
         Destroy(gameObject);

@@ -37,6 +37,7 @@ public class EnemyAI : MonoBehaviour
     [ContextMenu("die")]
     public void Die()
     {
+        FindAnyObjectByType<AudioManager>().Play("AntKilled");
         spawnLimiter.DecreaseCount();
         Destroy(gameObject);
     }

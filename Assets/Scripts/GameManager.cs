@@ -4,7 +4,6 @@ using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Unity.VisualScripting.Metadata;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerPointsSystem playerPointsSystem;
 
+    [SerializeField] private PlayerVoice playerVoice;
+ 
     [Header("Weapons references")]
 
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
@@ -74,7 +75,6 @@ public class GameManager : MonoBehaviour
         PauseLogic();
         playerLook.LookLogic();
         playerMovement.MovementLogic();
-
         playerHealth.TakeDamageLogic();
 
         for (int i = 0; i < pickUpWeapon.Count; i++)
@@ -96,6 +96,8 @@ public class GameManager : MonoBehaviour
         playerCrouch.CrouchLogic();
 
         canvasUI.UpdateUIText();
+
+        playerVoice.PlayerVoiceLogic();
 
         CheckKitchen();
         CheckBathroom();

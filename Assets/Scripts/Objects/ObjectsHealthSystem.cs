@@ -56,6 +56,8 @@ public class ObjectsHealthSystem : MonoBehaviour, IHealthSystem
 
     private IEnumerator DestroyObject(float time) 
     {
+        FindAnyObjectByType<AudioManager>().Play("DestroyObj");
+
         Instantiate(destroyParticlesEffectPrefab, gameObject.transform);
 
         yield return new WaitForSeconds(time);
