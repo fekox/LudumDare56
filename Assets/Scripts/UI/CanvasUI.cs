@@ -20,13 +20,15 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] private GameObject perAntTextPrebaf;
     [SerializeField] private GameObject perAnthillTextPrebaf;
 
+    [SerializeField] private GameManager gameManager;
+
     public void UpdateUIText()
     {
         pointsText.text = "Points: " + playerPointsSystem.GetCurrentPoints();
 
         PlayerPrefs.SetFloat("Player Score", playerPointsSystem.GetCurrentPoints());
 
-        currentBulletsText.text = "Bullets: " + playerShoot.GetCurrentBullets();
+        currentBulletsText.text = "Bullets: " + gameManager.GetCurrentBullets();
     }
 
     public void SpawnPerObjectText()

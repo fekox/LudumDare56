@@ -497,6 +497,7 @@ MonoBehaviour:
   perObjectTextPrebaf: {fileID: 827847129289861440, guid: 8029330cd8781a14f9748ecad9928d6a, type: 3}
   perAntTextPrebaf: {fileID: 4169446921874383900, guid: 4e46a696a0c2eb54f96e9ba0c426ffd9, type: 3}
   perAnthillTextPrebaf: {fileID: 7626182619759407224, guid: 55a14d46cfe17954fb0369026fc3e706, type: 3}
+  gameManager: {fileID: 657022559}
 --- !u!1001 &297552397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -929,6 +930,17 @@ Transform:
   - {fileID: 1850687742}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657022559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2640623977507597209, guid: 61b46cc71f3432b4c92ecc12e492c2a9, type: 3}
+  m_PrefabInstance: {fileID: 1507302106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831f00bf7cbb59f48b4ba5d8635eb5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,7 +2703,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3207,6 +3219,10 @@ PrefabInstance:
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 240649917}
+    - target: {fileID: 3021206586418210960, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: weaponID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3433603015382876305, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.45
@@ -3247,6 +3263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5107421318910951598, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3c1548963ab781e448a8bc5edd05502d, type: 2}
     - target: {fileID: 5370839665336438398, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3255,14 +3275,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6726482022848227927, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6946584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726482022848227927, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7193398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726482022848227927, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 92
+      objectReference: {fileID: 0}
     - target: {fileID: 6749384544026025470, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3c1548963ab781e448a8bc5edd05502d, type: 2}
+    - target: {fileID: 6749384544026025470, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 240649917}
+    - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: weaponID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
+      propertyPath: colliderPrefab
+      value: 
+      objectReference: {fileID: 6767424535883041241, guid: 1cfa40f9bce441949b94df7d80d498ec, type: 3}
     - target: {fileID: 7222457866438374762, guid: eb115de493d2d0548b66818a32b6795d, type: 3}
       propertyPath: shootParticles
       value: 

@@ -32,7 +32,11 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.transform.position);
         NavMeshAgent nma = GetComponent<NavMeshAgent>();
         Vector3 v3Velocity = nma.velocity;
-        transform.rotation = Quaternion.LookRotation(v3Velocity);
+        if (v3Velocity.magnitude > 0.00001)
+        {
+            transform.rotation = Quaternion.LookRotation(v3Velocity);
+        }
+        
     }
 
     [ContextMenu("die")]

@@ -15,11 +15,10 @@ MonoBehaviour:
   weaponType: 2
   weaponID: 2
   damage: 30
-  range: 20
+  range: 15
   maxBullets: 4
   currentBullets: 0
   fireRate: 0.5
-  impactForce: 60
+  impactForce: 20
   reloadingTime: 6
-  recoil: 600
   cost: 20

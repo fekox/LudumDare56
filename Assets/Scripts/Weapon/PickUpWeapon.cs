@@ -31,6 +31,8 @@ public class PickUpWeapon : MonoBehaviour
 
     public void PickUpLogic() 
     {
+       // Debug.Log("weapon name"+ weapon+" weapon cost " + weapon.GetCost());
+       // Debug.Log("can pickup "+ canPickup);
         if (canPickup && Input.GetKeyDown(KeyCode.E) 
             && weapon.GetCost() <= playerPoints.GetCurrentPoints()) 
         {
