@@ -30,6 +30,9 @@ public class EnemyAI : MonoBehaviour
     void Chase()
     {
         agent.SetDestination(player.transform.position);
+        NavMeshAgent nma = GetComponent<NavMeshAgent>();
+        Vector3 v3Velocity = nma.velocity;
+        transform.rotation = Quaternion.LookRotation(v3Velocity);
     }
 
     [ContextMenu("die")]

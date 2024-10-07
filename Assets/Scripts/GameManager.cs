@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.VisualScripting.Metadata;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,10 +41,17 @@ public class GameManager : MonoBehaviour
     private bool isBathroomActive;
     private bool isKitchenActive;
 
+    private spawnerGenerator respawnerGenerator;
+
 
     private void OnEnable()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Start()
+    {
+        respawnerGenerator = GameObject.FindGameObjectWithTag("respawnerGenerator").GetComponent<spawnerGenerator>();
     }
 
     void Update()
@@ -81,6 +89,15 @@ public class GameManager : MonoBehaviour
     private void ActiveKitchen() 
     {
         rooms[1].SetActive(true);
+
+        foreach (Transform child in rooms[1].transform)
+        {
+            if (child.tag == "respawnLocation")
+            {
+                respawnerGenerator.AddNewSpawner(child.gameObject);
+            }
+        }
+
         isKitchenActive = true;
     }
 
@@ -98,6 +115,15 @@ public class GameManager : MonoBehaviour
     private void ActiveBathroom() 
     {
         rooms[2].SetActive(true);
+
+        foreach (Transform child in rooms[2].transform)
+        {
+            if (child.tag == "respawnLocation")
+            {
+                respawnerGenerator.AddNewSpawner(child.gameObject);
+            }
+        }
+
         isBathroomActive = true;
     }
 
@@ -115,6 +141,15 @@ public class GameManager : MonoBehaviour
     private void ActiveLivingroom() 
     {
         rooms[3].SetActive(true);
+
+        foreach (Transform child in rooms[3].transform)
+        {
+            if (child.tag == "respawnLocation")
+            {
+                respawnerGenerator.AddNewSpawner(child.gameObject);
+            }
+        }
+
         isLivingActive = true;
     }
 
