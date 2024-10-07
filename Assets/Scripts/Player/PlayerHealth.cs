@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour, IHealthSystem
 {
@@ -118,6 +119,9 @@ public class PlayerHealth : MonoBehaviour, IHealthSystem
                     sandwichParts[2].SetActive(false);
                     sandwichParts[1].SetActive(false);
                     sandwichParts[0].SetActive(false);
+
+                    isDead = true;
+                    SceneManager.LoadScene(sceneName: "GameOver");
 
                     break;
 

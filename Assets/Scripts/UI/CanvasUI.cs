@@ -24,6 +24,8 @@ public class CanvasUI : MonoBehaviour
     {
         pointsText.text = "Points: " + playerPointsSystem.GetCurrentPoints();
 
+        PlayerPrefs.SetFloat("Player Score", playerPointsSystem.GetCurrentPoints());
+
         currentBulletsText.text = "Bullets: " + playerShoot.GetCurrentBullets();
     }
 
