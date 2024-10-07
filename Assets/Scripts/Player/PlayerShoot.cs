@@ -127,7 +127,7 @@ public class PlayerShoot : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * weapon.GetImpactForce());
             }
 
-            if (weaponID==1)
+            if (weaponID == 1)
             {
                 canvasUI.SpawnPerAntText();
                 StartCoroutine(SpawnCollider(hit.transform));

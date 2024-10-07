@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health = health - damage;
-        if (health==0)
+        if (health <= 0)
         {
             SpawnerDie();
         }
