@@ -131,6 +131,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int GetCurrentBullets()
+    {
+        return playerShoot[changePlayerWeapon.GetWeaponID()].GetCurrentBullets();
+    }
+       
+
     private void ActiveKitchen() 
     {
         rooms[1].SetActive(true);
