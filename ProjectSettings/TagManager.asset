@@ -8,6 +8,7 @@ TagManager:
   - respawnLocation
   - respawnerGenerator
   - WeaponCollider
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,6 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
         spawnLimiter = GameObject.FindGameObjectWithTag("SpawnLimiter").GetComponent<SpawnLimiter>();
-
     }
 
     void Update()
@@ -53,9 +52,9 @@ public class EnemyAI : MonoBehaviour
             Die();
         }
 
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
-            if (!player.GetComponent<PlayerHealth>().GetIsTakingDamage()) 
+            if (!player.GetComponent<PlayerHealth>().GetIsTakingDamage())
             {
                 player.GetComponent<PlayerHealth>().AddOneAnt(gameObject.transform.position);
             }

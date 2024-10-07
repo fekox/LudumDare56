@@ -31,12 +31,6 @@ public class spawnerGenerator : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private IEnumerator SpawnSpawner(float interval, GameObject spawner)
     {
         if ((spawnCount < spawnerLimit) && (respawnLocationList.Count > 0))
