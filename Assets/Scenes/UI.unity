@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -722,6 +722,34 @@ PrefabInstance:
     - target: {fileID: 4628155954470413507, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129614626703799658, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_text
+      value: Francisco Minaverry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129614626703799658, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_fontSize
+      value: 31.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129614626703799658, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 31.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509714161431358159, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_text
+      value: Alejo Antonio Salvador
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509714161431358159, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5509714161431358159, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079552011537645472, guid: 40e073941eb6b864394b480fba2207ac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
