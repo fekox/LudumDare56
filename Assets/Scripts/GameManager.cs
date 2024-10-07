@@ -46,12 +46,16 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private SpawnLimiter spawnLimiter;
 
+    [Header("Pause Menu")]
+    [SerializeField] private GameObject pauseMenu;
 
     private bool isLivingActive;
     private bool isBathroomActive;
     private bool isKitchenActive;
 
     private spawnerGenerator respawnerGenerator;
+
+    public bool isPaused;
 
 
     private void OnEnable()
@@ -66,6 +70,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        PauseLogic();
         playerLook.LookLogic();
         playerMovement.MovementLogic();
 
@@ -96,8 +101,33 @@ public class GameManager : MonoBehaviour
         CheckLiving();
 
         IncreaseDificult();
+        
     }
     
+    public void PauseLogic() 
+    {
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+        }
+
+        if (isPaused) 
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+
+        if (!isPaused)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+        }
+    }
+
     private void ActiveKitchen() 
     {
         rooms[1].SetActive(true);
